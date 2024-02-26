@@ -5,7 +5,6 @@ import Input from '../../../components/Input';
 
 const FiltersForm = ({
     openForm,
-    setOpenForm,
     setFilterParams,
     setCurrentPage,
     setFilter,
@@ -15,7 +14,6 @@ const FiltersForm = ({
         e.preventDefault();
 
         const value = document.forms['form'][openForm].value;
-
         if (!value) return;
 
         setFilterParams({
@@ -29,7 +27,6 @@ const FiltersForm = ({
     const handleReset = () => {
         setFilterParams(null);
         setFilter(null);
-        setOpenForm('');
         setValueFilter({});
     };
 
@@ -46,6 +43,9 @@ const FiltersForm = ({
                     name="product"
                     openForm={openForm}
                     type={'text'}
+                    onChange={(e) =>
+                        setValueFilter({ [openForm]: e.target.value })
+                    }
                     valueFilter={valueFilter}
                 />
 
@@ -53,6 +53,9 @@ const FiltersForm = ({
                     name="price"
                     openForm={openForm}
                     type={'number'}
+                    onChange={(e) =>
+                        setValueFilter({ [openForm]: e.target.value })
+                    }
                     valueFilter={valueFilter}
                 />
 
@@ -60,6 +63,9 @@ const FiltersForm = ({
                     name="brand"
                     openForm={openForm}
                     type={'text'}
+                    onChange={(e) =>
+                        setValueFilter({ [openForm]: e.target.value })
+                    }
                     valueFilter={valueFilter}
                 />
 

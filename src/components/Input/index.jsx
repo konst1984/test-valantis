@@ -9,7 +9,7 @@ const Input = ({ openForm, name, valueFilter, ...rest }) => {
                             name={name}
                             className="h-8 w-full max-w-80 rounded-md bg-zinc-400 px-3 text-white placeholder:capitalize focus:bg-zinc-600"
                             placeholder={name}
-                            defaultValue={valueFilter[name] ?? ''}
+                            value={valueFilter[name] ?? ''}
                             required
                             {...rest}
                         />

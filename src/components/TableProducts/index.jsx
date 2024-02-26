@@ -18,7 +18,6 @@ const TableProducts = ({ products, setFilterParams, setCurrentPage }) => {
 
             <FiltersForm
                 openForm={openForm}
-                setOpenForm={setOpenForm}
                 setFilter={setFilter}
                 setFilterParams={setFilterParams}
                 setCurrentPage={setCurrentPage}

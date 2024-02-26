@@ -66,13 +66,13 @@ const FiltersForm = ({
                 <Button
                     type="primary"
                     icon={<SearchOutlined />}
+                    title="Search by filter"
                     aria-label="Search by filter"
                     onClick={handleSubmit}
                     className="button min-w-24 border-2 border-white bg-[steelblue] px-4 py-1 hover:bg-blue-700 focus-visible:bg-blue-700"
                 />
 
                 <Button
-                    aria-label="Clear filter"
                     onClick={handleReset}
                     className="button bg-[brown] text-white"
                 >

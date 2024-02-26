@@ -15,7 +15,7 @@ const TableHeader = ({ data, openForm, filter, setOpenForm }) => {
                         key={item}
                         className=" grid min-h-full w-full grid-cols-1 items-center bg-[steelblue] p-2 text-center drop-shadow-[1px_1px_rgba(0,0,0,100)] md:grid-cols-[1fr_auto]"
                     >
-                        <span className="flex items-center justify-center">
+                        <span className="flex items-center justify-center text-white">
                             {item}
                         </span>
 
@@ -23,6 +23,7 @@ const TableHeader = ({ data, openForm, filter, setOpenForm }) => {
                             <Button
                                 icon={<FilterOutlined />}
                                 onClick={() => handleClick(item)}
+                                title="Open/Close filter"
                                 className={`m-auto h-8 w-8 border-none text-white ${filter === item ? 'bg-green-700' : openForm === item ? 'bg-blue-900' : ''}`}
                             />
                         )}

@@ -101,3 +101,11 @@ ul {
 .button {
     @apply rounded-md font-semibold uppercase transition-all duration-300 active:scale-90;
 }
+
+.form-input {
+    @apply h-8 w-full max-w-80 rounded-md bg-zinc-400 px-3  placeholder:capitalize focus:bg-zinc-600;
+}
+
+.form-label {
+    @apply grid w-full gap-2 uppercase text-white drop-shadow-[1px_1px_rgba(0,0,0,100)];
+}

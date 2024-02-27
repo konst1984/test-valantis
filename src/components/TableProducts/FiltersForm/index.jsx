@@ -42,7 +42,9 @@ const FiltersForm = ({
                 <Input
                     name="product"
                     openForm={openForm}
-                    type={'text'}
+                    type="text"
+                    labelClassName="form-label"
+                    className="form-input"
                     onChange={(e) =>
                         setValueFilter({ [openForm]: e.target.value })
                     }
@@ -52,7 +54,9 @@ const FiltersForm = ({
                 <Input
                     name="price"
                     openForm={openForm}
-                    type={'number'}
+                    type="number"
+                    labelClassName="form-label"
+                    className="form-input"
                     onChange={(e) =>
                         setValueFilter({ [openForm]: e.target.value })
                     }
@@ -62,7 +66,9 @@ const FiltersForm = ({
                 <Input
                     name="brand"
                     openForm={openForm}
-                    type={'text'}
+                    type="text"
+                    labelClassName="form-label"
+                    className="form-input"
                     onChange={(e) =>
                         setValueFilter({ [openForm]: e.target.value })
                     }

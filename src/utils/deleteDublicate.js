@@ -13,3 +13,19 @@ export const deleteDublicate = (arr) => {
         return false;
     });
 };
+
+export const deleteDublicateText = (arr) => {
+    const uniqueIds = [];
+
+    return arr.filter((element) => {
+        const isDuplicate = uniqueIds.includes(element);
+
+        if (!isDuplicate) {
+            uniqueIds.push(element);
+
+            return true;
+        }
+
+        return false;
+    });
+};

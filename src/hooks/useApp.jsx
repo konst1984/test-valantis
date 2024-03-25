@@ -6,7 +6,10 @@ import {
     getIdsByFilters,
 } from '../services/index.js';
 import { LIMIT } from '../constants/index.js';
-import { deleteDublicate } from '../utils/deleteDublicate.js';
+import {
+    deleteDublicate,
+    deleteDublicateText,
+} from '../utils/deleteDublicate.js';
 
 const useApp = () => {
     const [filterParams, setFilterParams] = useState(null);
@@ -44,14 +47,14 @@ const useApp = () => {
             );
             const dataTotal = filterParams
                 ? uniqueProducts
-                : await getIdsTotal();
+                : deleteDublicateText(await getIdsTotal());
             setTotalProductsNumber(dataTotal.length);
             setLoading(false);
             removeOverflowHidden();
         };
 
         getDataProducts(offset).catch((error) => {
-            console.log(error.response?.status);
+            console.log(error.response?.data);
             getDataProducts();
         });
     }, [currentPage, filterParams]);
